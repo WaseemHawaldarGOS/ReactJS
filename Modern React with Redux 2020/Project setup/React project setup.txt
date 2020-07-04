@@ -1,0 +1,71 @@
+Make sure nodejs is installed
+
+npm install -g create-react-app
+
+create-react-app jsx
+
+---altenate method which is combination of above 2 commands:
+npx create-react-app <name of project>
+Note: npx comes from npm above 5.2 and higher
+
+-----------------------Theory------------------
+
+Javascript version is ES5
+other javascript versions are ES2015, Es2016, Es2017, Es2018, Es2019
+See - Javascript-version-browser-compatibility.png
+
+Babel is used to make javscript version which does not work on all browsers. It converts the JS code say from ES2015 to ES5, and Es5 works in almost all browsers.
+
+We see more number of packages installed when we do create-react-app because of babel libraries
+See - Create-react-app-libraries.png
+See - Babel-job.png
+See - create-react-app-project-contents-overview.png
+See - Steps-to-stop-and-start-app.png
+
+------------------------My practicals---------------
+
+C:\Users\Waseem Hawaldar>cd D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace
+
+C:\Users\Waseem Hawaldar>d:
+
+D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace>npm install -g create-react-app
+C:\Users\Waseem Hawaldar\AppData\Roaming\npm\create-react-app -> C:\Users\Waseem Hawaldar\AppData\Roaming\npm\node_modules\create-react-app\index.js
++ create-react-app@3.4.1
+removed 1 package and updated 12 packages in 46.105s
+
+D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace>create-react-app react-app
+
+Creating a new React app in D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace\react-app.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template...
+                              
+Success! Created react-app at D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace\react-app
+Inside that directory, you can run several commands:
+
+  npm start
+    Starts the development server.
+
+  npm run build
+    Bundles the app into static files for production.
+
+  npm test
+    Starts the test runner.
+
+  npm run eject
+    Removes this tool and copies build dependencies, configuration files
+    and scripts into the app directory. If you do this, you can’t go back!
+
+We suggest that you begin by typing:
+
+  cd react-app
+  npm start
+
+Happy hacking!
+
+
+Launch page - http://localhost:3000/
+How it looks - D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace-images\launch-page.png
+ 
+
+

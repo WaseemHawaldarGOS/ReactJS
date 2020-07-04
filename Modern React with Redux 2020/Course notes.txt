@@ -1,0 +1,173 @@
+***********************************************Section 2***************************************
+What is JSX?
+Babel converts our normal html code that we write in React component(using JSX) to ES5 format or Javascript format which every browser understands.
+
+See image - Babel-diagram.png
+
+Visit Babeljs.io to see how babel converts jsx to javascript.
+ See images - Babel-conversion1.png and Babel-conversion2.png
+ 
+--------------------------------Difference between HTML and JSX code syntax-----------
+
+We have 3 differences - Html-JSX-all-differences.png
+
+-----Difference 1 - css styling syntax difference between HTML and JSX.
+
+Go to codepen.io and type below code:
+<div>
+  <label class="label" for="name"> Enter name:</label>
+  <input id="name" type="text"/>
+  <button style="background-color:blue; color: white;">Submit</button>
+</div>
+
+See diagram - codepen-code.png
+
+Create new react project for handson
+command to create new project is - 
+D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace>npx create-react-app html-jsx-syntax-difference
+
+Delete src contents and add contents as shown in project.
+
+Now type same code in react component(App.js) and see if it works.
+Error found - HTML-code-error.png
+
+Syntax difference: 
+<button style="background-color:blue; color: white;">Submit</button> 
+has been changed to 
+<button style={{backgroundColor:'blue', color: 'white'}}>Submit</button>
+First curly brace indicates javascript variable and second one indicates javascript object.
+
+----Difference 2 - Adding a class to element using different syntax
+
+<label class="label" for="name"> Enter name:</label>
+in JSX is
+<label class="label" for="name"> Enter name:</label>
+
+class is called className to differentiate between class component keyword.
+It stills allows class as well as some flexibility and may be removed in future.
+
+-----Difference 3: JSX can reference JS variables
+
+See - Difference 3 component
+
+-------------------How to fix html and jsx differences warning on our own--
+
+Inspect Difference1 component and see that 'for' is 'htmlFor' in JSX. Just replace it with 'htmlFor' and test it.
+See - console-inspect.png
+
+
+************************************************Section 3*******************************************
+
+3 topics in scope - Topics-in-scope.png
+Mockup for this section - Mockup.png
+
+Semantic UI CDN link - <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+Practicals - 
+D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace>npx create-react-app section-3-components
+
+Remove all files from src and create App component in index.js
+
+Next to integrate semantic ui in our project.
+search for semantic cdn in google and open first link i.e. https://cdnjs.com/libraries/semantic-ui
+Once open, click on css tab and scroll down or search for semantic.min.css and copy the url and paste it in index.html of our project.
+
+To confirm that semantic css has been loaded. Observe the hello world text in div of App component will change it's font.
+Another way to confirm is go to inspect and select network and click on css option. Reload page and see semantic css has been loaded.
+
+See - Before-adding-sematic-cdn.png and after-adding-sematic-cdn.png
+
+Faker JS is used to create fake image, company, finance data or avatar.
+Visit faker.js github to see the documentation.
+-https://github.com/marak/Faker.js/
+
+To add faker to our project, execute below command
+npm install --save faker
+
+
+********************************Section 4***********************************
+Difference-betn-class-and-function-component.png
+
+Earlier function component was only used to show JSX content and not play with lifecycle/state objects.
+With newer version of react, functional components can also play with lifecycle and state. This is achieved with the help of hooks.
+See - functional-component-with-hooks.png
+
+When to use class and functional components in our project?
+See - when-to-use-class-or-functional-components.png
+
+Benefits-of-class-component.png
+
+Application-mockup.png
+
+App-challenges.png
+
+GeoLocation API link mentioned below has documentation on how to fetch geolocation using position object.
+https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API
+Note: it is unavailable in china.
+
+To see geolocation in code, go to console and observe
+See -> my-geolocation.png
+
+Once user says to allows to geolocation pop up, it will be always allowed.
+To reset and ask again, click on the 'i' icon and say 'ask'.
+See - how-to-reset-geolocation-preferences.png
+
+******************************************Section 5 - State in React components***************
+Rules_of_state.png
+
+App-lifecycle.png
+
+How to run this source code:
+==========================
+Positive scenario image1: Positive-scenario-image1.png
+Positive scenario image2: Positive-scenario-image2.png
+Positive scenario image3: Positive-scenario-image3.png
+
+Negative scenario image1: Negative-scenario-image1.png 
+Negative scenario image2: Negative-scenario-image2.png
+Negative scenario image3: Negative-scenario-image3.png
+
+******************************************Section 6 - Understanding Lifecycle methods*************
+
+Lifecycle stages - Lifecycle-methods.png
+
+Render method is used to only return JCX code and not do anything else.
+ComponentDidMount gets invoked only once. It is best place to do data loading or location fetching.
+Though constructor & ComponentDidMount both are best places to do component data loading kind of stuff, but it is advisable to do it in ComponentDidMount as per REACT docs/standards.
+
+ComponentDidUpdate should be used when we want to do data reloading everytime there is change in state/props.
+
+ComponentWillUnmount will be used mainly for some kind of cleanup.
+
+See - Lifecycle-methods-with-desc.png
+
+See - Rarely-used-lifecycle-methods.png
+
+constructor(props){
+            super(props);
+            this.state = {
+                lat: null,
+                errorMessage: ''
+            }
+        }
+
+can be written as 
+state = {lat: null, errorMessage: ''}
+
+because babel on it's own convert this line to constructor.
+to confirm, visit babeljs.io, click on try it out and enable stage1, stage2, stage3, react.
+Paste the code on LHS and see the converted version on RHS.
+
+See - Babel-convertor-with-constructor.png
+
+
+See - Northern-Southern-hemisphere-weather-identify-chart.png
+Note: in above image, orange indicates summer and blue indicates winter.
+Note: 0 to 11 are months. with 0 being Jan and 11 being Dec.
+
+See - Benefits-of-class-based-components.png
+
+See - Rules-of-class-components.png
+
+See - Project-output-1.png
+See - Project-output-2.png

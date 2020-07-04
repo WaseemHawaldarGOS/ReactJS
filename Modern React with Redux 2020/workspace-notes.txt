@@ -1,0 +1,32 @@
+Once React project setup is done. 
+
+------------------Router configuration--------------
+Lecture - 204
+
+Execute below command to install router
+npm install --save react-router-dom
+
+See - why react-router-dom.png
+
+------------------React and redux integration --------------
+npm install --save redux
+
+npm install --save react-redux
+
+Lecture 153 has those details
+
+--------------------redux-form practicals----------------
+
+Lecture - 233 onwards
+
+Search for sematic ui cdn in google and click on css tab of first link and copy the semantic.min.css file path.
+and below line to index.html of public folder
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+
+Refer - D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace-images\Semantic-min-css-path-copy.png
+Lecture - 147
+
+npm install --save redux-form
+
+--------------------------------------------------------------------
+
