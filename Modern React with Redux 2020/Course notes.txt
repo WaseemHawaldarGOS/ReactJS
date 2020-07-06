@@ -171,3 +171,111 @@ See - Rules-of-class-components.png
 
 See - Project-output-1.png
 See - Project-output-2.png
+
+******************************************Section 7 - Handling user input with forms and events*************
+
+See - App-mock-up.png
+See - App-mock-up-v2.png
+See - App-challenges.png
+See - Components-diagram.png
+
+onSubmit this->this
+Cannot read property 'state' of undefined.
+
+Solution1:
+Another way of solving above issue is to use bind in constructor.
+See - Fix-context-issues.png
+
+
+Solution2: 
+Use arrow function, this arrow function always consider this as class object. In  this case it is searchBar object.
+See - Using-arrow-function.png
+
+Solution3: 
+Use arrow function while invoking onSubmit event.
+See - Using-arrow-function-onsubmitEvent.png
+
+See - Communicating-child-to-parent.png
+
+
+******************************************Section 8 - Making API requests with React*************
+
+See - Mockup-for-using-unplash-API.png
+
+-------All about unsplash begin----------------
+
+Unsplash is a company that provide API to return whatever we ask for, eg. If we ask for cars, it will send back list of car images matching our search criteria.
+
+Creating account and appplication in unsplash
+launch : https://unsplash.com/developers
+Click on register as developer.
+Join using facebook was not working, so create a new account.
+
+Click on New Application 
+Application Name: React Pics
+Desc: This application is used to fetch pics
+
+TO get root URI for unsplash, go to documentation.
+click on schema -> location.
+
+to know how to pass authorization header to unsplash.
+Clik on documentation , Authorization.
+
+To get access key 
+Go to unsplash application that we had created, scroll down and pick the access key.
+
+How to get specific car url that we want to use in out application.
+Once made axios call to unspalsh, go to console->inspect->Network.
+Clik on Get cars call, click on preview, Scroll down to see urls, select regular one and copy the URL.
+
+Now click on documentation tab and click on search photos and understand on how to fetch images.
+
+
+
+
+See - React-to-unspalsh-communication.png
+
+-------All about unsplash end----------------
+
+See - axios-vs-fetch.png
+
+Always use axios with compared with fetch because if we use fetch we have to access very low level functions.
+It also has corner case issues. axios has all inbuilt and easy to use.
+
+npm install --save axios
+
+import standards:
+always put third party imports above user defined imports.
+
+See - Application-flow.png
+
+---------------------------------Asynchronous handling concept---------------
+
+  onSearchSubmit(term) {
+        axios.get(url, params, headers);		
+  };
+  
+In above snipper, axios.get is an asynchronous call, so the function flow will go ahead and get will happen separately.
+To handle this, we can call then on promise.
+
+axios.get() returns a promise.We can add .then on promise to make this call synchronous and fetch the data after it completes.
+
+So new code is 
+
+  onSearchSubmit(term) {
+        axios.get(url, params, headers).then(respone => {console.log(response)});		
+  };
+
+-----
+Another way of solving above problem.
+
+  async onSearchSubmit(term) {
+        const response = await axios.get(url, params, headers);
+		console.log(response);
+  };
+  
+Aysnc await is a lot simpler to understand when compared with fetch.
+
+
+
+
