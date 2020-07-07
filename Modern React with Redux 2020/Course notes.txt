@@ -277,5 +277,19 @@ Another way of solving above problem.
 Aysnc await is a lot simpler to understand when compared with fetch.
 
 
+-------------------------------------------Section 9 Building list of records---------------
 
+See - For_Loop_verses_Map.png
+
+We can improve performance in react by loading only that particular element in a list which has been modified.
+We can do this by adding id attribute to the list, which should be unique for every element in the list.
+
+See - Performance-improve-by-ID.png
+See in above diagram only key=4 would be added from new rendered list to currently in the DOM object.
+
+It won't rerender entire component in this case.
+
+Note: Section 9 code is available in section-8 project in workspace folder.
+
+------------------------------------
 
