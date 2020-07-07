@@ -277,7 +277,7 @@ Another way of solving above problem.
 Aysnc await is a lot simpler to understand when compared with fetch.
 
 
--------------------------------------------Section 9 Building list of records---------------
+**************************************Section 9 Building list of records*********************************
 
 See - For_Loop_verses_Map.png
 
@@ -290,6 +290,16 @@ See in above diagram only key=4 would be added from new rendered list to current
 It won't rerender entire component in this case.
 
 Note: Section 9 code is available in section-8 project in workspace folder.
+This completes v1 implementation.
 
-------------------------------------
+**************************************Section 10 Using Ref for DOM access*********************************
+
+See - Steps-to-adjust-image-size.png
+
+See - how-to-use-react-ref.png
+
+This is V2 implementation.
+
+
+
 
