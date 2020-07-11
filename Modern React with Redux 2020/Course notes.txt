@@ -301,5 +301,90 @@ See - how-to-use-react-ref.png
 This is V2 implementation.
 
 
+**************************************Section 12 Understanding hooks in React*********************************
 
+See - Learning-pattern.png
 
+Features-of-hooks.png
+
+All-primitive-hooks.png
+
+Custom-hook.png
+
+App-mockup.png
+
+App-design.png
+
+design-to-make-sure-only-one-question-to-show-at-a-time.png
+
+What does accordion style mean?
+The accordion is a graphical control element comprising a vertically stacked list of items, such as labels or thumbnails. ... An accordion is similar in purpose to a tabbed interface, a list of items where exactly one item is expanded into a panel (i.e. list items are shortcuts to access separate panels).
+
+Code notes:
+React.Fragment is added in accordion component to remove extra div which was creating a additional border on other 2 divs.
+To show only JSX content without wrapping it in additional div use React.Fragement.
+
+If we write code like this in Accordion component
+onClick={onTitleClick(index)}
+Then onTitleClick will be called on render for all 3 items.
+Instead use arrow funtion to call it only on click or only in future.
+
+Array-destructuring-eg.png
+How-useState-works.png
+state-setting-diff-betn-class-func-components.png
+
+multi-state-setting-diff-betn-class-func-components.png
+
+----------
+
+Counter-example-mockup.png
+
+Counter-example-solution.PNG
+-----------
+Mockup2-image1.png
+Mockup2-image2.png
+Mockup2-image3.png
+Mockup2-image4.png
+
+Wikipedia-API-for-searching.png
+
+App-design-for-search.png
+
+2-possible-options-of-doing-search.png
+
+Whu-search-option2-is-better-than-1.png
+Note: option2 is better because we can trigger search even if any other part of component changes and not necessarily onChange event like option1. This can be achieved using useEffect.
+
+The-use-effect-hook.png
+
+useEffect-second-argument-options.png
+
+npm install axios
+
+Note: Arrow function defined within useEffect cannot be of type async and await.
+Solution1: We can have body withing arrow function of useEffect to be of type async function.
+See - Solution1.png
+
+Solution2: wrap the function in braces and add another parameter as a brace.
+See - Solution2.png
+
+Solution3: Use the 'then' method of promise.
+See - Solution3.PNG
+
+React recommends solution1.
+
+Code notes:
+Because wikipedia returned results with some <span> in it, we can directly render that html in react using dangerouslySetInnerHTML as shown in below pic.
+It leads to XSS(Cross site scripting) attacks, as some third party html we are rendering in our application.
+See - dangerouslySetInnerHTML.png
+
+See - throttle-api-requests.png
+See - throttle-api-requests-detailed-dgm.PNG
+
+See - Steps-to-clear-setTimeOut.png
+As shown in diagram, everytime we call setTimeOut, it returns a unique number and clearing that unique number, resets the timer to 0.
+
+See - How-is-cleanup-called-in-useeffect.png
+The only thing that useEffect function can return is another arrow function output in return statement.
+First time when component gets rendered useEffect gets called and than return cleanup will be kept on hold.
+Only on any state change like term change, the cleanup of previous call will be called first and then new useEffect will be called.
