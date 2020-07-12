@@ -388,3 +388,26 @@ See - How-is-cleanup-called-in-useeffect.png
 The only thing that useEffect function can return is another arrow function output in return statement.
 First time when component gets rendered useEffect gets called and than return cleanup will be kept on hold.
 Only on any state change like term change, the cleanup of previous call will be called first and then new useEffect will be called.
+
+See - Event-bubbling-concept.png
+How it works?
+For any event it could be onClickEvent, the browser first gets the event and then forwards it to React App.
+One more thing to notice is for every event it travels all the way to parent to see if someone has handled the event else invokes onClickEvent handler of the current component. That is event bubbling all the way up till html.
+
+See - When-to-use-event-bubbling.png
+
+See - How-to-implement-event-bubbling.png
+
+See - How-to-set-event-listener-on-body.png
+
+See - Order-of-events-getting-called-using-event-bubbling1.png
+See - Order-of-events-getting-called-using-event-bubbling2.PNG
+Please note that first addEventListener takes preference and then react listeners comes into play.
+
+See - Scenario1-to-consider-while-closing-dropdown.png
+See - Scenario2-to-consider-while-closing-dropdown.PNG
+Problem: When we click on dropdown element, body event listener was closing the dropdown, but when onclick event listener of dropdown event listener was called it was setting !open, so dropdown was opening again.
+Solution to close the dropdown on click on dropdown element or body is to stop body event listener from closing the dropdown if we click on dropdown element.
+This can be achieved by using useRef, add ref to most parent element of dropdown element and then check if the onClick event is matching with the ref. If it matches then don't let body event listener close the dropdown.
+
+
