@@ -441,3 +441,16 @@ This API can only be used when your browser is at ‘http://localhost:3000’. I
 npm install axios --save
 
 
+*********************************************Section13 - Navigation from scratch********************
+
+About-React-Router.png
+
+Open console and type window.location to see the pathname before implementing router.
+See - Deriving-pathname.png
+
+Route-mappings.png
+
+Adding-navigation-event.png
+
+
+
