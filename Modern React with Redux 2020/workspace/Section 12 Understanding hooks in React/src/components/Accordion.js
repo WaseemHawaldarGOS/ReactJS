@@ -8,10 +8,10 @@ const Accordion = ({ items }) => {
   };
 
 
-{/*
+/*
 React.Fragment is added in accordion component to remove extra div which was creating a additional border on other 2 divs.
 To show only JSX content without wrapping it in additional div use React.Fragment.
-*/}
+*/
   const renderedItems = items.map((item, index) => {
     const active = index === activeIndex ? 'active' : '';
 

@@ -3,7 +3,9 @@ import React, { useState } from 'react';
 import Accordion from './components/Accordion';
 // eslint-disable-next-line
 import Search from './components/Search';
+// eslint-disable-next-line
 import Dropdown from './components/Dropdown';
+import Translate from './components/Translate';
 
 
 // eslint-disable-next-line
@@ -42,11 +44,13 @@ const options = [
     Enable <Accordion items={items}/> to see Accordian application and <Search/> to see Search application
 */
 export default () => {
+// eslint-disable-next-line
   const [selected, setSelected] = useState(options[0]);
+  // eslint-disable-next-line
   const [showDropdown, setShowDropdown] = useState(true);
 
   return (
-    <div>
+/*    <div>
       <button onClick={() => setShowDropdown(!showDropdown)}>
         Toggle Dropdown
       </button>
@@ -55,8 +59,13 @@ export default () => {
           selected={selected}
           onSelectedChange={setSelected}
           options={options}
+          label='Select a color'
         />
       ) : null}
+    </div>*/
+
+    <div>
+        <Translate/>
     </div>
   );
 };
