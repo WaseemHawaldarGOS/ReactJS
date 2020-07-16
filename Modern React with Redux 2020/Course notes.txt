@@ -464,6 +464,16 @@ Custom hooks are not used to make JSX code reusbale (for this we can define reus
 Process-for-creating-custom-reusable-hooks.png
 
 
+*********************************************Section 16 - On we go to Redux**************************
+
+See - Es15-syntax-3-dots.png
+See - Source code for code pen.txt
+
+Refer  - Redux-diagrams.xml
+Open this using draw.io to view all the images used in this section.
+
+
+*********************************************Section 16 - On we go to Redux**************************
 
 
 
