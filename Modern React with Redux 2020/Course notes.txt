@@ -452,5 +452,18 @@ Route-mappings.png
 
 Adding-navigation-event.png
 
+*********************************************Section 14 - Hooks in practice**************************
+
+This is youtube videos application.
+See - Application-mockup.png
+Custom-hooks.png
+
+Rules-for-custom-hooks.png
+Custom hooks are not used to make JSX code reusbale (for this we can define reusable component), but custom hooks are used to make state setting and retrieving reusable.
+
+Process-for-creating-custom-reusable-hooks.png
+
+
+
 
 
