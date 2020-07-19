@@ -473,7 +473,28 @@ Refer  - Redux-diagrams.xml
 Open this using draw.io to view all the images used in this section.
 
 
-*********************************************Section 16 - On we go to Redux**************************
+*********************************************Section 17 - Integrating react with redux**************************
+
+npm install --save redux react-redux
+
+Add semantic ui cdn
+
+Provider and connect libraries are provided by react-redux. 
+Provider just makes sure that all the redux store data is provided to all the components.
+connect connects to reducers/store data via provider.
+
+When we have named export like export const fucntioName{}
+We should import it using {}
+Similarly when we have default export like export default functionName
+We should import it without {}
+
+See - how-connect-works.png
+connect() ()
+the second set of paranthesis says that invoke the returning function.
+
+All this section images are present in Integrating-react-with-redux-diagrams.xml
+
+
 
 
 
