@@ -1,4 +1,4 @@
-***********************************************Section 2***************************************
+***********************************************Section 2 Building content with JSX***************************************
 What is JSX?
 Babel converts our normal html code that we write in React component(using JSX) to ES5 format or Javascript format which every browser understands.
 
@@ -56,7 +56,7 @@ Inspect Difference1 component and see that 'for' is 'htmlFor' in JSX. Just repla
 See - console-inspect.png
 
 
-************************************************Section 3*******************************************
+************************************************Section 3 Communicating with Props*******************************************
 
 3 topics in scope - Topics-in-scope.png
 Mockup for this section - Mockup.png
@@ -85,7 +85,7 @@ To add faker to our project, execute below command
 npm install --save faker
 
 
-********************************Section 4***********************************
+********************************Section 4 Sturcturing Apps with class based components***********************************
 Difference-betn-class-and-function-component.png
 
 Earlier function component was only used to show JSX content and not play with lifecycle/state objects.
@@ -131,7 +131,7 @@ Negative scenario image3: Negative-scenario-image3.png
 
 Lifecycle stages - Lifecycle-methods.png
 
-Render method is used to only return JCX code and not do anything else.
+Render method is used to only return JSX code and not do anything else.
 ComponentDidMount gets invoked only once. It is best place to do data loading or location fetching.
 Though constructor & ComponentDidMount both are best places to do component data loading kind of stuff, but it is advisable to do it in ComponentDidMount as per REACT docs/standards.
 
@@ -142,6 +142,52 @@ ComponentWillUnmount will be used mainly for some kind of cleanup.
 See - Lifecycle-methods-with-desc.png
 
 See - Rarely-used-lifecycle-methods.png
+
+shouldComponentUpdate()
+=======================
+
+shouldComponentUpdate(nextProps, nextState)
+Use shouldComponentUpdate() to let React know if a component’s output is not affected by the current change in state or props. The default behavior is to re-render on every state change, and in the vast majority of cases you should rely on the default behavior.
+
+shouldComponentUpdate() is invoked before rendering when new props or state are being received. Defaults to true. This method is not called for the initial render or when forceUpdate() is used.
+
+This method only exists as a performance optimization. Do not rely on it to “prevent” a rendering, as this can lead to bugs. Consider using the built-in PureComponent instead of writing shouldComponentUpdate() by hand. PureComponent performs a shallow comparison of props and state, and reduces the chance that you’ll skip a necessary update.
+
+If you are confident you want to write it by hand, you may compare this.props with nextProps and this.state with nextState and return false to tell React the update can be skipped. Note that returning false does not prevent child components from re-rendering when their state changes.
+
+We do not recommend doing deep equality checks or using JSON.stringify() in shouldComponentUpdate(). It is very inefficient and will harm performance.
+
+Currently, if shouldComponentUpdate() returns false, then UNSAFE_componentWillUpdate(), render(), and componentDidUpdate() will not be invoked. In the future React may treat shouldComponentUpdate() as a hint rather than a strict directive, and returning false may still result in a re-rendering of the component.
+
+static getDerivedStateFromProps()
+================================
+
+static getDerivedStateFromProps(props, state)
+getDerivedStateFromProps is invoked right before calling the render method, both on the initial mount and on subsequent updates. It should return an object to update the state, or null to update nothing.
+
+This method exists for rare use cases where the state depends on changes in props over time. For example, it might be handy for implementing a <Transition> component that compares its previous and next children to decide which of them to animate in and out.
+
+Deriving state leads to verbose code and makes your components difficult to think about.
+Make sure you’re familiar with simpler alternatives:
+
+If you need to perform a side effect (for example, data fetching or an animation) in response to a change in props, use componentDidUpdate lifecycle instead.
+If you want to re-compute some data only when a prop changes, use a memoization helper instead.
+If you want to “reset” some state when a prop changes, consider either making a component fully controlled or fully uncontrolled with a key instead.
+This method doesn’t have access to the component instance. If you’d like, you can reuse some code between getDerivedStateFromProps() and the other class methods by extracting pure functions of the component props and state outside the class definition.
+
+Note that this method is fired on every render, regardless of the cause. This is in contrast to UNSAFE_componentWillReceiveProps, which only fires when the parent causes a re-render and not as a result of a local setState.
+
+getSnapshotBeforeUpdate()
+========================
+
+getSnapshotBeforeUpdate(prevProps, prevState)
+getSnapshotBeforeUpdate() is invoked right before the most recently rendered output is committed to e.g. the DOM. It enables your component to capture some information from the DOM (e.g. scroll position) before it is potentially changed. Any value returned by this lifecycle will be passed as a parameter to componentDidUpdate().
+
+This use case is not common, but it may occur in UIs like a chat thread that need to handle scroll position in a special way.
+
+A snapshot value (or null) should be returned.
+
+----------------------------------------------------------------
 
 constructor(props){
             super(props);
@@ -302,6 +348,9 @@ This is V2 implementation.
 
 
 **************************************Section 12 Understanding hooks in React*********************************
+													*********
+													*Theory:*
+													*********
 
 See - Learning-pattern.png
 
@@ -309,7 +358,66 @@ Features-of-hooks.png
 
 All-primitive-hooks.png
 
+useContext
+==========
+const value = useContext(MyContext);
+Accepts a context object (the value returned from React.createContext) and returns the current context value for that context. The current context value is determined by the value prop of the nearest <MyContext.Provider> above the calling component in the tree.
+
+When the nearest <MyContext.Provider> above the component updates, this Hook will trigger a rerender with the latest context value passed to that MyContext provider. Even if an ancestor uses React.memo or shouldComponentUpdate, a rerender will still happen starting at the component itself using useContext.
+
+
+useReducer
+=========
+const [state, dispatch] = useReducer(reducer, initialArg, init);
+An alternative to useState. Accepts a reducer of type (state, action) => newState, and returns the current state paired with a dispatch method. (If you’re familiar with Redux, you already know how this works.)
+
+useReducer is usually preferable to useState when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. useReducer also lets you optimize performance for components that trigger deep updates because you can pass dispatch down instead of callbacks.
+
+
+useCallback
+===========
+const memoizedCallback = useCallback(
+  () => {
+    doSomething(a, b);
+  },
+  [a, b],
+);
+Returns a memoized callback.
+
+Pass an inline callback and an array of dependencies. useCallback will return a memoized version of the callback that only changes if one of the dependencies has changed. This is useful when passing callbacks to optimized child components that rely on reference equality to prevent unnecessary renders (e.g. shouldComponentUpdate).
+
+
+useMemo
+=======
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+Returns a memoized value.
+
+Pass a “create” function and an array of dependencies. useMemo will only recompute the memoized value when one of the dependencies has changed. This optimization helps to avoid expensive calculations on every render.
+
+Remember that the function passed to useMemo runs during rendering. Don’t do anything there that you wouldn’t normally do while rendering. For example, side effects belong in useEffect, not useMemo.
+
+
+useLayoutEffect
+===============
+The signature is identical to useEffect, but it fires synchronously after all DOM mutations. Use this to read layout from the DOM and synchronously re-render. Updates scheduled inside useLayoutEffect will be flushed synchronously, before the browser has a chance to paint.
+
+Prefer the standard useEffect when possible to avoid blocking visual updates.
+
+useDebugValue
+=============
+useDebugValue(value)
+useDebugValue can be used to display a label for custom hooks in React DevTools.
+
+For example, consider the useFriendStatus custom Hook described in “Building Your Own Hooks”:
+
+----------------------------------------------------------------------------------------------------
+
 Custom-hook.png
+
+
+													************
+													*Practicals*
+													************
 
 App-mockup.png
 
@@ -495,6 +603,6 @@ the second set of paranthesis says that invoke the returning function.
 All this section images are present in Integrating-react-with-redux-diagrams.xml
 
 
-
+*********************************************Section 18 TBD**************************
 
 

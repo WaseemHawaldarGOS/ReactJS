@@ -65,7 +65,8 @@ export default () => {
     </div>*/
 
     <div>
-        <Translate/>
+        {/*<Translate/>*/}
+        <Accordion items={items}/>
     </div>
   );
 };
