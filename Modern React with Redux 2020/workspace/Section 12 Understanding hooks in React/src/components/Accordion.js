@@ -19,6 +19,11 @@ Once users clicks and onTitleClick is called, it sets the active label to active
 ` content $active`} gets enabled which in turn starts showing content.
 
 If u set classname="content active" it will always shows all the content irrespective of on click event.
+
+If we write code like this in Accordion component
+onClick={onTitleClick(index)}
+Then onTitleClick will be called on render for all 3 items.
+Instead use arrow function to call it only on click or only in future.
 */
   const renderedItems = items.map((item, index) => {
     const active = index === activeIndex ? 'active' : '';

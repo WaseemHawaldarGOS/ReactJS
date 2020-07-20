@@ -50,7 +50,10 @@ export default () => {
   const [showDropdown, setShowDropdown] = useState(true);
 
   return (
-/*    <div>
+   <div>
+    {/*<Accordion items={items}/>*/}
+    {/*<Search/>*/}
+
       <button onClick={() => setShowDropdown(!showDropdown)}>
         Toggle Dropdown
       </button>
@@ -62,11 +65,10 @@ export default () => {
           label='Select a color'
         />
       ) : null}
-    </div>*/
 
-    <div>
-        {/*<Translate/>*/}
-        <Accordion items={items}/>
+      {/*<Translate/>*/}
+
     </div>
+
   );
 };

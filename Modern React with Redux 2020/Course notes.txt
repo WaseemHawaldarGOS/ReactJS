@@ -419,6 +419,9 @@ Custom-hook.png
 													*Practicals*
 													************
 
+---------------------------------------Application 1 Accordion begin----------------------------------
+
+
 App-mockup.png
 
 App-design.png
@@ -428,31 +431,25 @@ design-to-make-sure-only-one-question-to-show-at-a-time.png
 What does accordion style mean?
 The accordion is a graphical control element comprising a vertically stacked list of items, such as labels or thumbnails. ... An accordion is similar in purpose to a tabbed interface, a list of items where exactly one item is expanded into a panel (i.e. list items are shortcuts to access separate panels).
 
-Code notes:
-React.Fragment is added in accordion component to remove extra div which was creating a additional border on other 2 divs.
-To show only JSX content without wrapping it in additional div use React.Fragement.
-
-If we write code like this in Accordion component
-onClick={onTitleClick(index)}
-Then onTitleClick will be called on render for all 3 items.
-Instead use arrow funtion to call it only on click or only in future.
-
 Array-destructuring-eg.png
 How-useState-works.png
 state-setting-diff-betn-class-func-components.png
 
 multi-state-setting-diff-betn-class-func-components.png
 
-----------
+---------------------------------------Application 1 Accordion end----------------------------------
 
+
+---------------------------------------Application 2 Counter begin----------------------------------
 Counter-example-mockup.png
 
 Counter-example-solution.PNG
------------
-Mockup2-image1.png
-Mockup2-image2.png
-Mockup2-image3.png
-Mockup2-image4.png
+
+---------------------------------------Application 2 Counter begin----------------------------------
+
+---------------------------------------Application 3 List begin----------------------------------
+
+List-mockup.png
 
 Wikipedia-API-for-searching.png
 
@@ -460,7 +457,7 @@ App-design-for-search.png
 
 2-possible-options-of-doing-search.png
 
-Whu-search-option2-is-better-than-1.png
+Why-search-option2-is-better-than-1.png
 Note: option2 is better because we can trigger search even if any other part of component changes and not necessarily onChange event like option1. This can be achieved using useEffect.
 
 The-use-effect-hook.png
@@ -497,6 +494,12 @@ The only thing that useEffect function can return is another arrow function outp
 First time when component gets rendered useEffect gets called and than return cleanup will be kept on hold.
 Only on any state change like term change, the cleanup of previous call will be called first and then new useEffect will be called.
 
+---------------------------------------Application 3 List end----------------------------------
+
+---------------------------------------Application 4 Dropdown begin----------------------------------
+
+Dropdown-mockup.png
+
 See - Event-bubbling-concept.png
 How it works?
 For any event it could be onClickEvent, the browser first gets the event and then forwards it to React App.
@@ -518,8 +521,11 @@ Problem: When we click on dropdown element, body event listener was closing the 
 Solution to close the dropdown on click on dropdown element or body is to stop body event listener from closing the dropdown if we click on dropdown element.
 This can be achieved by using useRef, add ref to most parent element of dropdown element and then check if the onClick event is matching with the ref. If it matches then don't let body event listener close the dropdown.
 
+---------------------------------------Application 4 Dropdown end----------------------------------
 
--------------
+---------------------------------------Application 5 Translate begin----------------------------------
+
+Translate-mockup.png
 
 Translate-component-mockup.png
 Translate-component-design.PNG
@@ -547,6 +553,8 @@ AIzaSyCHUCmpR7cT_yDFHC98CZJy2LTms-IwDlM
 This API can only be used when your browser is at ‘http://localhost:3000’. If you try to make a request to the API from any other address, the request will fail.
 
 npm install axios --save
+
+---------------------------------------Application 5 Translate end----------------------------------
 
 
 *********************************************Section13 - Navigation from scratch********************
