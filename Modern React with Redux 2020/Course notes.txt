@@ -270,7 +270,7 @@ Clik on documentation , Authorization.
 To get access key 
 Go to unsplash application that we had created, scroll down and pick the access key.
 
-How to get specific car url that we want to use in out application.
+How to get specific car url that we want to use in our application.
 Once made axios call to unspalsh, go to console->inspect->Network.
 Clik on Get cars call, click on preview, Scroll down to see urls, select regular one and copy the URL.
 
@@ -285,7 +285,7 @@ See - React-to-unspalsh-communication.png
 
 See - axios-vs-fetch.png
 
-Always use axios with compared with fetch because if we use fetch we have to access very low level functions.
+Always use axios when compared to fetch because if we use fetch we have to access very low level functions.
 It also has corner case issues. axios has all inbuilt and easy to use.
 
 npm install --save axios
@@ -302,9 +302,9 @@ See - Application-flow.png
   };
   
 In above snipper, axios.get is an asynchronous call, so the function flow will go ahead and get will happen separately.
-To handle this, we can call then on promise.
+To handle this, we can call 'then' on promise.
 
-axios.get() returns a promise.We can add .then on promise to make this call synchronous and fetch the data after it completes.
+axios.get() returns a promise.We can add '.then' on promise to make this call synchronous and fetch the data after it completes.
 
 So new code is 
 
@@ -320,7 +320,7 @@ Another way of solving above problem.
 		console.log(response);
   };
   
-Aysnc await is a lot simpler to understand when compared with fetch.
+Aysnc await is a lot simpler to understand when compared with '.then' promise.
 
 
 **************************************Section 9 Building list of records*********************************
@@ -526,8 +526,6 @@ This can be achieved by using useRef, add ref to most parent element of dropdown
 ---------------------------------------Application 5 Translate begin----------------------------------
 
 Translate-mockup.png
-
-Translate-component-mockup.png
 Translate-component-design.PNG
 Convert-component-design.png
 Google-translate-API.png

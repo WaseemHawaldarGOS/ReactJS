@@ -8,6 +8,9 @@ class ImageCard extends React.Component {
     That height will then be used to set span, which is defined in css to accordingly create
     so many spans as required.
     this.imageRef is just an instance variable, it can be labelled anything.
+
+    First we are imageRef and then take the ref from img and assign it's resultant value to imageRef.
+    Once imageRef is initialized, we go to componentdidMount and do remaining stuff.
 */
   constructor(props) {
     super(props);
@@ -19,6 +22,9 @@ class ImageCard extends React.Component {
 
 /*
     In below method if we don't wait for load event listener, we shall end up with height value as 0.
+
+    This is a basic html or javascript listener to listen to load event. Once it sets the spans, you may notice that spans
+    is state property. And bcz state property changes it will rerender the whole component and redraws it with new spans value
 */
   componentDidMount() {
     this.imageRef.current.addEventListener('load', this.setSpans);

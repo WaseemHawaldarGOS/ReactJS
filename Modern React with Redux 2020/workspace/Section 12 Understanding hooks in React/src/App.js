@@ -54,7 +54,7 @@ export default () => {
     {/*<Accordion items={items}/>*/}
     {/*<Search/>*/}
 
-      <button onClick={() => setShowDropdown(!showDropdown)}>
+      {/*<button onClick={() => setShowDropdown(!showDropdown)}>
         Toggle Dropdown
       </button>
       {showDropdown ? (
@@ -64,9 +64,9 @@ export default () => {
           options={options}
           label='Select a color'
         />
-      ) : null}
+      ) : null}*/}
 
-      {/*<Translate/>*/}
+      <Translate/>
 
     </div>
 

@@ -24,7 +24,7 @@ const Convert = ({ language, text }) => {
     TO use below key, we need to necessarily run application on localhost:3000
 
     See below in axios we have passed third param, it is bcz google translate API docs says to pass query params.
-    note: in axiox second param is body.
+    note: in axios second param is body.
 
     Note that below useEffect gets called only when debouncedText changes
 */
