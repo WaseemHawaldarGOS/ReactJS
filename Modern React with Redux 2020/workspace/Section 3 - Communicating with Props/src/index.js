@@ -95,7 +95,7 @@ const App = () => {
 }*/}
 
 // eslint-disable-next-line
-{/*Below App component shows how to pass component as prop
+{/*Below App component shows how to pass component as props
 to another component and access it as a children.*/}
 const App = () => {
     return (

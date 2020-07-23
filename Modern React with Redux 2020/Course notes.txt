@@ -1,17 +1,19 @@
 ***********************************************Section 2 Building content with JSX***************************************
-What is JSX?
-Babel converts our normal html code that we write in React component(using JSX) to ES5 format or Javascript format which every browser understands.
+What is Babel?
+Babel converts our normal html code that we write in React component(using JSX) to ES5/Javascript format which every browser understands.
 
 See image - Babel-diagram.png
 
 Visit Babeljs.io to see how babel converts jsx to javascript.
  See images - Babel-conversion1.png and Babel-conversion2.png
  
---------------------------------Difference between HTML and JSX code syntax-----------
+Difference between HTML and JSX code syntax
+===========================================
 
 We have 3 differences - Html-JSX-all-differences.png
 
------Difference 1 - css styling syntax difference between HTML and JSX.
+Difference 1 - css styling syntax difference between HTML and JSX
+=================================================================
 
 Go to codepen.io and type below code:
 <div>
@@ -25,6 +27,7 @@ See diagram - codepen-code.png
 Create new react project for handson
 command to create new project is - 
 D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace>npx create-react-app html-jsx-syntax-difference
+Note: html-jsx-syntax-difference project name has been renamed to Section 2 Building content with JSX
 
 Delete src contents and add contents as shown in project.
 
@@ -37,45 +40,35 @@ has been changed to
 <button style={{backgroundColor:'blue', color: 'white'}}>Submit</button>
 First curly brace indicates javascript variable and second one indicates javascript object.
 
-----Difference 2 - Adding a class to element using different syntax
+How to fix html and jsx differences warning on our own
+======================================================
 
-<label class="label" for="name"> Enter name:</label>
-in JSX is
-<label class="label" for="name"> Enter name:</label>
+Inspect in console for Difference1 component and see that 'for' is 'htmlFor' in JSX. 
+We found below warning in console:
+Warning: Invalid DOM property `for`. Did you mean `htmlFor`?
 
-class is called className to differentiate between class component keyword.
-It stills allows class as well as some flexibility and may be removed in future.
-
------Difference 3: JSX can reference JS variables
-
-See - Difference 3 component
-
--------------------How to fix html and jsx differences warning on our own--
-
-Inspect Difference1 component and see that 'for' is 'htmlFor' in JSX. Just replace it with 'htmlFor' and test it.
+Just replace it with 'htmlFor' and test it.
 See - console-inspect.png
 
 
 ************************************************Section 3 Communicating with Props*******************************************
 
-3 topics in scope - Topics-in-scope.png
-Mockup for this section - Mockup.png
+Topics-in-scope.png
+Mockup.png
 
-Semantic UI CDN link - <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-
-Practicals - 
-D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace>npx create-react-app section-3-components
-
-Remove all files from src and create App component in index.js
-
-Next to integrate semantic ui in our project.
+Steps to integrate semantic ui in our project.
 search for semantic cdn in google and open first link i.e. https://cdnjs.com/libraries/semantic-ui
 Once open, click on css tab and scroll down or search for semantic.min.css and copy the url and paste it in index.html of our project.
+Note: Semantic UI CDN link - <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
 To confirm that semantic css has been loaded. Observe the hello world text in div of App component will change it's font.
 Another way to confirm is go to inspect and select network and click on css option. Reload page and see semantic css has been loaded.
 
-See - Before-adding-sematic-cdn.png and after-adding-sematic-cdn.png
+Before-adding-sematic-cdn.png
+after-adding-sematic-cdn.png
+
+About Faker library
+===================
 
 Faker JS is used to create fake image, company, finance data or avatar.
 Visit faker.js github to see the documentation.
@@ -83,7 +76,6 @@ Visit faker.js github to see the documentation.
 
 To add faker to our project, execute below command
 npm install --save faker
-
 
 ********************************Section 4 Sturcturing Apps with class based components***********************************
 Difference-betn-class-and-function-component.png
@@ -557,7 +549,7 @@ npm install axios --save
 
 *********************************************Section13 - Navigation from scratch********************
 
-About-React-Router.png
+About-react-router.png
 
 Open console and type window.location to see the pathname before implementing router.
 See - Deriving-pathname.png
