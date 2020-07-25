@@ -19,10 +19,15 @@ const useVideos = (defaultSearchTerm) => {
 /*
     THis method makes call to youtube videos API and return search method as well as response videos.
 */
+    const KEY = 'AIzaSyA6ozh1xCz41nN-2GxBVkLKSQ3P2ZJyOqU';
+
   const search = async (term) => {
     const response = await youtube.get('/search', {
       params: {
-        q: term,
+       q: term,
+       part: "snippet",
+       maxResults: 5,
+       key: KEY
       },
     });
 
