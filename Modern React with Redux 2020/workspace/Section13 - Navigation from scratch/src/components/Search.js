@@ -37,6 +37,7 @@ Stackoverflow link - https://stackoverflow.com/questions/55840294/how-to-fix-mis
         }
       }, 1000);
 
+      //Below is clean up function of useEffect.
       return () => {
         clearTimeout(timeoutId);
       };

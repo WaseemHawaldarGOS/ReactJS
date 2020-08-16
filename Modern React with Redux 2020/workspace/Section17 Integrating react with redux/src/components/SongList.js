@@ -8,12 +8,12 @@ class SongList extends Component {
       return (
         <div className="item" key={song.title}>
           <div className="right floated content">
-            <button
+            <div
               className="ui button primary"
               onClick={() => this.props.selectSong(song)}
             >
               Select
-            </button>
+            </div>
           </div>
           <div className="content">{song.title}</div>
         </div>
@@ -30,7 +30,4 @@ const mapStateToProps = state => {
   return { songs: state.songs };
 };
 
-export default connect(
-  mapStateToProps,
-  { selectSong }
-)(SongList);
+export default connect(mapStateToProps, { selectSong })(SongList);

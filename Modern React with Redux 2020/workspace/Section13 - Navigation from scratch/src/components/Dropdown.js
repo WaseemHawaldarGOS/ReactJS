@@ -42,6 +42,7 @@ const Dropdown = ({ options, selected, onSelectedChange, label }) => {
         className="item"
         onClick={() => onSelectedChange(option)}
       >
+      {/*Below label is to show dropdown values*/}
         {option.label}
       </div>
     );
@@ -59,12 +60,13 @@ if the onClick event is matching with the ref. If it matches then don't let body
   return (
     <div ref={ref} className="ui form">
       <div className="field">
-        <label className="label">label</label>
+        <label className="label">{label}</label>
         <div
           onClick={() => setOpen(!open)}
-          className={`ui selection dropdown ${open ? 'visible active' : ''}`}
-        >
+          className={`ui selection dropdown ${open ? 'visible active' : ''}`}>
+
           <i className="dropdown icon"></i>
+          {/*Below label is to show selected dropdown value*/}
           <div className="text">{selected.label}</div>
           <div className={`menu ${open ? 'visible transition' : ''}`}>
             {renderedOptions}

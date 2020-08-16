@@ -570,6 +570,27 @@ Custom hooks are not used to make JSX code reusbale (for this we can define reus
 Process-for-creating-custom-reusable-hooks.png
 
 
+Steps to generate youtube API key:
+launch http://console.developers.google.com/
+login with gmail credentials
+
+click on create project
+Project name - ReactJS youtube API
+and click on create
+
+Once creation is complete, go to select project and select our project from dropdown.
+
+Click on '+Enable APIS and Service'
+Type youtube in search and select v3.
+
+Click on Enable
+
+Now click on credentials link on LHS
+Click on 'configure consent screen'
+
+Refer section 11, 113 lecture for more details.
+Working API key is AIzaSyA6ozh1xCz41nN-2GxBVkLKSQ3P2ZJyOqU
+
 *********************************************Section 16 - On we go to Redux**************************
 
 See - Es15-syntax-3-dots.png
@@ -577,7 +598,8 @@ See - Source code for code pen.txt
 
 Refer  - Redux-diagrams.xml
 Open this using draw.io to view all the images used in this section.
-
+or
+View Redux-diagrams.png
 
 *********************************************Section 17 - Integrating react with redux**************************
 
