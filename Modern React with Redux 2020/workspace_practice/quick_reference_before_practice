@@ -1,0 +1,23 @@
+npx create-react-app html-jsx-syntax-difference
+
+why we use React Fragments?
+https://reactjs.org/docs/fragments.html
+
+when you are calling any method which is defined outside useEffect, React complains that it must be everytime compile and passed to useEffect. To let React know to stop doing this check, add below line.
+// eslint-disable-next-line react-hooks/exhaustive-deps
+
+href={`https://en.wikipedia.org?curid=${result.pageid}`}
+
+await axios.get('https://en.wikipedia.org/w/api.php', {
+        params: {
+          action: 'query',
+          list: 'search',
+          origin: '*',
+          format: 'json',
+          srsearch: term,
+        },
+      }
+	  
+Note: while writing function based component's helper methods, at the end of every return and at the end of every map there should be a semicolon.
+	  
+	  

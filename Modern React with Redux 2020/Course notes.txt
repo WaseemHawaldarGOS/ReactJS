@@ -622,7 +622,84 @@ the second set of paranthesis says that invoke the returning function.
 
 All this section images are present in Integrating-react-with-redux-diagrams.xml
 
+*********************************************Section 18 - Async actions with Redux Thunk**************************
 
-*********************************************Section 18 TBD**************************
+JSON placeholder API is used to make fake API calls:
+
+http://jsonplaceholder.typicode.com/
+
+Scroll down and see in resources we have 2 links called as post and users.
+
+npx create-react-app blog
+npm install --save redux react-redux axios redux-thunk
+
+How to create reducers:
+export default combineReducers({
+	replaceMe: () => 'Hi There'
+});
+
+Source code of redux thunk:
+https://github.com/reduxjs/redux-thunk
+
+Go to src/index.js observe that overall redux thunk src code is single file of 14 lines.
+
+*********************************************Section 19 - Redux store design**************************
+
+Source code for redux
+github.com/reduxjs/redux 
+
+See - Redux-src-code.png
+
+Summary: This is to help you understand 4th rule of reducers. 
+MISLEADING >> Must not mutate its input 'state' argument
+
+conclusion: if any state has changed in reducer then new state would be returned else previous state would be returned.
+and component rerender would happen only if state changes.
+
+
+state updating common src codes examples:
+updating-state-eg1.png
+updating-state-eg2.png
+updating-state-eg3.png
+
+eg3 is using lodash syntax.
+See docs - https://lodash.com/docs/
+Note: to try out eg3, open lodash.com/docs and then open console of browser so that lodash library gets added.
+
+To go to new line in browser console hit shift+enter
+
+npm install --save lodash
+
+Memoize is used to make a service call only once with one set of arguments. If you make same service again and with same arguments, it won't make a service call instead return it's previously cache result for that arguments.
+Docs can be found here:
+https://lodash.com/docs/#memoize
+
+
+Examples for memoize.
+Without memoize -> Without-memoize.png
+
+With memoize -> With-memoize.png
+
+Code snippet used for memoize examples:
+function getUser(id){
+	fetch(id);
+	return 'Made a request!'
+}
+getUser(1)
+getUser(2)
+getUser(3)
+getUser(1)
+getUser(2)
+getUser(3)
+
+const memoizedGetUser = _.memoize(getUser)
+memoizedGetUser(1)
+memoizedGetUser(2)
+memoizedGetUser(3)
+memoizedGetUser(1)
+memoizedGetUser(2)
+memoizedGetUser(3)
+
+Note: to try memoize example, open lodash.com/docs and then open console of browser so that lodash library gets added.
 
 
