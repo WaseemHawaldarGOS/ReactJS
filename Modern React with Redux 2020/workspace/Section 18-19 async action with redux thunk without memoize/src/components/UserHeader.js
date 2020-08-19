@@ -13,6 +13,7 @@ class UserHeader extends React.Component {
   }
 }
 
+//Here ownProps refers to input props of UserHeader component.
 const mapStateToProps = (state, ownProps) => {
   return { user: state.users.find(user => user.id === ownProps.userId) };
 };
