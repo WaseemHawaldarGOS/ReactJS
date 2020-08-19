@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Section-6-lifecycle-methods.iml" filepath="$PROJECT_DIR$/.idea/Section-6-lifecycle-methods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Section-6-lifecycle-methods.iml" filepath="$PROJECT_DIR$/Section-6-lifecycle-methods.iml" />
     </modules>
   </component>
 </project>
