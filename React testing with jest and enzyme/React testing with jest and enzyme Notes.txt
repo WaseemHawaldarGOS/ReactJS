@@ -1,0 +1,212 @@
+These are the versions used in this course: 
+
+react: 16.9.0
+
+jest: 24.8.0
+
+enzyme: 3.10.0
+
+redux: 4.0.4
+
+react-redux: 7.1.1
+
+
+--------------------------------------------------------------------------------------------------------------------------
+--using CRA
+npx create-react-app demo
+
+
+--without using CRA
+Steps to setup without using CRA
+Step1:
+npm install --save-dev jest
+
+Step2:
+in package.json scripts add below entry
+"test": "jest --watch"
+
+Step3:
+got to src, create file called as App.test.js and write test case to render component
+
+*********************************************************************************************************************************
+
+Excecute below command to run all test cases
+
+npm test
+The above command will run test case only if there is code change. change should be from last commit code. CRA automatically maps to git repo as well.
+
+in watch mode in terminal
+press a to run all tests
+press q to quit watch mode
+press o to run only last change
+
+
+*************************************************************************************************************************************
+
+IMPORTANT NOTE: enzyme-adapter-react-17 not yet available
+Create-React-App uses React 17, but Enzyme Adapter Not Yet Available
+On October 23, 2020, create-react-app updated to React 17. Since running npx create-react-app as recommended in this course will use the latest version of create-react-app, your apps will be using React 17 as well.
+
+
+
+What this means to you
+
+Unfortunately, the official enzyme-adapter-react-17 is not yet available. Note that much of the course will work fine with enzyme-adapter-react-16, but you might see this error when using mount: 
+
+TypeError: Cannot read property "child" of undefined
+
+
+
+Unofficial adapter for React 17
+
+Until the official adapter is released, you can use this unofficial adapter by running:
+
+npm install --save-dev @wojtekmaj/enzyme-adapter-react-17
+You will also need to import from this adapter: 
+
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
+anywhere the course imports from enzyme-adapter-react-16.
+
+There are some known issues with the unofficial adapter (it doesn't work with TypeScript), but it will fix some issues with using mount.
+
+
+
+This should be a very temporary issue.
+
+When the official adapter becomes available, I will update the lectures in this course to reflect this. Thanks!
+
+
+***************************************************************************************************************************
+
+Theory on enzyme
+
+what-does-enzyme-do.png
+Enzyme-vs-ReactDOM.png
+Enzyme-shallow-rendering.png
+Enzyme-access-to-props-and-state.png
+
+
+--practicals on enzyme setup
+
+npm install --save-dev enzyme jest-enzyme enzyme-adapter-react-16
+
+note: use adapter version based on your react version
+
+For react version 17, we need to use unofficial version of enzyme 17 using below command
+npm install --save-dev @wojtekmaj/enzyme-adapter-react-17
+
+
+The above command failed, we manually updated package.json and changed react version from 17 to 16. Because we want to use enzyme version as 16.9.0.
+
+
+Refer https://enzymejs.github.io/enzyme/docs/api/shallow.html to know more on shallow methods that are available.
+
+Refer - https://jestjs.io/docs/en/expect to know all options in expect API of Jest.
+
+
+See - Types-of-tests.png
+
+Source code repo used in in this course - https://github.com/bonnie/udemy-react-testing-projects
+
+**********************************************************************************************************************************
+
+Section 2:
+
+See - data-test-attributes.png
+
+See - https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/find.html to know about shallow find/selector details
+
+Steps to remove data-test-attributes from PROD build
+====================================================
+
+commands used in this section
+npm install --save-dev babel-plugin-react-remove-properties
+
+npm run eject
+Note: code should be commited before we use the above command.
+What npm eject does is it pulls our configuration properties and makes it editable to us.
+If we look at package.json after the eject command is complete, we can see many more props added to it.
+
+Now go and edit package.json and below lines in babel props
+"env": {
+    "production": {
+      "plugins": [
+        ["react-remove-properties", {"properties": ["data-test"]}]
+      ]
+    }
+  }
+
+npm run build
+Note: this command is used for production build
+
+sudo npm install -g server
+Note: above command is to install server for PROD build command to run
+
+server -s build
+Note: this command is to serve app
+
+Once we edit package.json to remove data-test-attributes using babel.
+
+Once we bring up PROD app, inspect and see that data-test-attributes are no longer there.
+
+See this link to know the babel props that we had used - https://www.npmjs.com/package/babel-plugin-react-remove-properties
+---------------------------------
+
+see this link for text method docs of shallow rendering - https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/text.html
+
+link for simulate method of shallow rendering - https://enzymejs.github.io/enzyme/docs/api/ShallowWrapper/simulate.html
+
+**********************************************************************************************************************************
+Section3
+
+commands used
+npm install --save-dev enzyme jest-enzyme enzyme-adapter-react-16
+nom install --save-dev check-prop-types
+
+Refer https://github.com/facebook/prop-types for prop types
+
+Refer https://www.npmjs.com/package/check-prop-types for check prop types
+
+**********************************************************************************************************************************
+Section 7 - Testing Axios
+
+See - Moxios-syntax.png
+
+See - Moxios-syntax2.png
+
+Commands used:
+npm install axios
+npm install --save-dev moxios
+
+**********************************************************************************************************************************
+Section 4
+
+Bootstrap cdn link - https://www.bootstrapcdn.com/
+
+**********************************************************************************************************************************
+Section 5
+
+npm install --save redux react-redux
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
