@@ -24,7 +24,24 @@ Go to codepen.io and type below code:
 
 See diagram - codepen-code.png
 
-Create new react project for handson
+*****************************************************************************************
+
+Note: Before moving to project for handson, refer "React project setup.txt" file. 
+It has steps to install node js and create sample react app and test on browser.
+
+Once we complete above steps, follow below commands to rerun existing code available in workspace folder.
+> D:\Waseem\Git-code\ReactJS\Modern React with Redux 2020\workspace\Section 2 Building content with JSX
+> npm install
+> npm start
+
+You may do above steps either by using command prompt or intellij terminal.
+
+After above commands, we can see the application running on localhost:3000.
+Now keep playing with JSXDifference1.js, JSXDifference2.js and JSXDifference3.js
+
+*****************************************************************************************
+
+We can also create new react project for handson by using existing code in workspace
 command to create new project is - 
 D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace>npx create-react-app html-jsx-syntax-difference
 Note: html-jsx-syntax-difference project name has been renamed to Section 2 Building content with JSX
@@ -61,6 +78,8 @@ search for semantic cdn in google and open first link i.e. https://cdnjs.com/lib
 Once open, click on css tab and scroll down or search for semantic.min.css and copy the url and paste it in index.html of our project.
 Note: Semantic UI CDN link - <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
+Note: above mentioned semantic stylesheet is configured in $projectName/public/index.html file.
+
 To confirm that semantic css has been loaded. Observe the hello world text in div of App component will change it's font.
 Another way to confirm is go to inspect and select network and click on css option. Reload page and see semantic css has been loaded.
 
@@ -76,6 +95,11 @@ Visit faker.js github to see the documentation.
 
 To add faker to our project, execute below command
 npm install --save faker
+
+Practicals (npm install command was failing due to babel issue):
+==========
+
+Go through D:\Waseem\Git-code\ReactJS\Modern React with Redux 2020\workspace\Section 3 - Communicating with Props\src\index.js code in intellij to understand all about props.
 
 ********************************Section 4 Sturcturing Apps with class based components***********************************
 Difference-betn-class-and-function-component.png
@@ -209,6 +233,12 @@ See - Rules-of-class-components.png
 
 See - Project-output-1.png
 See - Project-output-2.png
+
+Practicals:
+launch D:\Waseem\Git-code\ReactJS\Modern React with Redux 2020\workspace\Section-6-lifecycle-methods in intellij ultimate edition
+execute below commands in intellij terminal to see output:
+> npm install
+> npm start
 
 ******************************************Section 7 - Handling user input with forms and events*************
 

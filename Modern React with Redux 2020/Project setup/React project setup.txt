@@ -1,5 +1,14 @@
 Make sure nodejs is installed
 
+Install node js from - https://nodejs.org/dist/v15.2.1/
+Node JS version used is v15.2.1
+
+C:\Users\Nafeesa>npm --version
+7.0.8
+
+find node version from here - https://nodejs.org/dist/
+
+
 npm install -g create-react-app
 
 create-react-app jsx
@@ -63,6 +72,25 @@ We suggest that you begin by typing:
 
 Happy hacking!
 
+--------------------------
+
+To start server run below command once u go to path -> D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace\react-ap
+> npm start
+
+It takes time to start once it is started you will see below message in command prompt:
+Compiled successfully!
+
+You can now view knowledge-refresh in the browser.
+
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.0.103:3000
+
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+
+webpack compiled successfully
+
+--------------------------
 
 Launch page - http://localhost:3000/
 How it looks - D:\JPMC-Data\Udemy trainings\Modern React with Redux 2020\workspace-images\launch-page.png
