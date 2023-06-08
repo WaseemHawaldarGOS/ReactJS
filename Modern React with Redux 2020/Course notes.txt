@@ -294,7 +294,7 @@ Go to unsplash application that we had created, scroll down and pick the access 
 
 How to get specific car url that we want to use in our application.
 Once made axios call to unspalsh, go to console->inspect->Network.
-Clik on Get cars call, click on preview, Scroll down to see urls, select regular one and copy the URL.
+Click on Get cars call, click on preview, Scroll down to see urls, select regular one and copy the URL.
 
 Now click on documentation tab and click on search photos and understand on how to fetch images.
 
@@ -323,7 +323,7 @@ See - Application-flow.png
         axios.get(url, params, headers);		
   };
   
-In above snipper, axios.get is an asynchronous call, so the function flow will go ahead and get will happen separately.
+In above snippet, axios.get is an asynchronous call, so the function flow will go ahead and get will happen separately.
 To handle this, we can call 'then' on promise.
 
 axios.get() returns a promise.We can add '.then' on promise to make this call synchronous and fetch the data after it completes.
@@ -344,6 +344,13 @@ Another way of solving above problem.
   
 Aysnc await is a lot simpler to understand when compared with '.then' promise.
 
+Praticals:
+
+launch D:\Waseem\Git-code\ReactJS\Modern React with Redux 2020\workspace\Section-8 - Making API requests
+execute below commands in intellij terminal to see output:
+> npm install
+> npm install --save axios
+> npm start
 
 **************************************Section 9 Building list of records*********************************
 
