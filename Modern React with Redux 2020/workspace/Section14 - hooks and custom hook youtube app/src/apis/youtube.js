@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const KEY = 'AIzaSyA6ozh1xCz41nN-2GxBVkLKSQ3P2ZJyOqU';
+const KEY = 'AIzaSyA88ak-On1k9B3MX5_BtZ_VGe9pBWs14zo';
 
 /*
     This makes call to youtube API to fetch videos.

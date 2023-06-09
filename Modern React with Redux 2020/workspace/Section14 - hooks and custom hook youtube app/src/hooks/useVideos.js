@@ -19,7 +19,7 @@ const useVideos = (defaultSearchTerm) => {
 /*
     THis method makes call to youtube videos API and return search method as well as response videos.
 */
-    const KEY = 'AIzaSyA6ozh1xCz41nN-2GxBVkLKSQ3P2ZJyOqU';
+    const KEY = 'AIzaSyA88ak-On1k9B3MX5_BtZ_VGe9pBWs14zo';
 
   const search = async (term) => {
     const response = await youtube.get('/search', {
