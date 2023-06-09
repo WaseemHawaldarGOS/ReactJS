@@ -611,22 +611,24 @@ Steps to generate youtube API key:
 launch http://console.developers.google.com/
 login with gmail credentials
 
-click on create project
+click on create project or select existing project 
+Note: I was observing 403 forbidden error when I select project as ReactJS youtube API. 
+To resolve this, I selected project as MyFirstProject.(maybe everytime we need to select new project)
 Project name - ReactJS youtube API
 and click on create
 
 Once creation is complete, go to select project and select our project from dropdown.
 
 Click on '+Enable APIS and Service'
-Type youtube in search and select v3.
+Type youtube in search and select v3 (i.e. Youtube Data API V3).
 
 Click on Enable
 
 Now click on credentials link on LHS
-Click on 'configure consent screen'
+and click on "+Create credentials" on top RHS which will generate API key.
 
-Refer section 11, 113 lecture for more details.
-Working API key is AIzaSyA6ozh1xCz41nN-2GxBVkLKSQ3P2ZJyOqU
+Copy that API key and paste it in useVideos.js and youtube.js files.
+Working key: AIzaSyA88ak-On1k9B3MX5_BtZ_VGe9pBWs14zo
 
 *********************************************Section 16 - On we go to Redux**************************
 
