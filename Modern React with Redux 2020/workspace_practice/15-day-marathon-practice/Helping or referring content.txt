@@ -1,0 +1,17 @@
+ui container grid
+ui row
+column eight wide
+
+ui divided list
+
+item
+right floated content
+ui button primary
+content
+
+<h3>Details for:</h3>
+<p>
+        Title: {song.title}
+        <br />
+        Duration: {song.duration}
+      </p>
