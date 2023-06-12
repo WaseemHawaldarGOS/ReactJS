@@ -9,7 +9,7 @@ class ImageCard extends React.Component {
     so many spans as required.
     this.imageRef is just an instance variable, it can be labelled anything.
 
-    First we are imageRef and then take the ref from img and assign it's resultant value to imageRef.
+    First we create imageRef and then take the ref from img and assign it's resultant value to imageRef.
     Once imageRef is initialized, we go to componentdidMount and do remaining stuff.
 */
   constructor(props) {
