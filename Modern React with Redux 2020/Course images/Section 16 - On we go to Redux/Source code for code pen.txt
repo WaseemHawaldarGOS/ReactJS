@@ -1,6 +1,15 @@
+//references 
+// https://codepen.io/iamscottcox/pen/xROoyR?editors=1010
+// https://redux.js.org/docs/basics/ExampleTodoList.html
+// https://codepen.io/jnmorse/pen/qbLegO
+// https://codepen.io/tag/react-redux/
+
+//import {combineReducers} from 'redux'
 console.clear();
 
-// People dropping off a form (Action Creators)
+//*********************************************************************************************************************************************************
+// Create some actions
+//*********************************************************************************************************************************************************
 const createPolicy = (name, amount) => {
   return { // Action (a form in our analogy)
     type: 'CREATE_POLICY',
@@ -30,8 +39,9 @@ const createClaim = (name, amountOfMoneyToCollect) => {
   };
 };
 
-
-// Reducers (Departments!)
+//*********************************************************************************************************************************************************
+// Create some reducers
+//*********************************************************************************************************************************************************
 const claimsHistory = (oldListOfClaims = [], action) => {
   if (action.type === 'CREATE_CLAIM') {
     // we care about this action (FORM!)
@@ -42,7 +52,7 @@ const claimsHistory = (oldListOfClaims = [], action) => {
   return oldListOfClaims;
 };
 
-const accounting = (bagOfMoney = 100, action) => {
+const accounting = (bagOfMoney = 0, action) => {
   if (action.type === 'CREATE_CLAIM') {
     return bagOfMoney - action.payload.amountOfMoneyToCollect;
   } else if (action.type === 'CREATE_POLICY') {
@@ -62,6 +72,9 @@ const policies = (listOfPolicies = [], action) => {
   return listOfPolicies;
 };
 
+//*********************************************************************************************************************************************************
+// Create a store of reducers all combined together
+//*********************************************************************************************************************************************************
 const { createStore, combineReducers } = Redux;
 
 const ourDepartments = combineReducers({
@@ -72,17 +85,20 @@ const ourDepartments = combineReducers({
 
 const store = createStore(ourDepartments);
 
-createPolicy('Alex', 20)
-createClaim('Alex', 120)
-deletePolicy('Alex')
+//*********************************************************************************************************************************************************
+// Start invoking actions(i.e. customer dropping forms) and see how reducer/department processes it. Uncomment one after the other to see the behavior
+//*********************************************************************************************************************************************************
 
 store.dispatch(createPolicy('Alex', 20));
-store.dispatch(createPolicy('Jim', 30));
-store.dispatch(createPolicy('Bob', 40));
+//store.dispatch(createPolicy('Jim', 30));
+//store.dispatch(createPolicy('Bob', 40));
 
-// store.dispatch(createClaim('Alex', 120));
-// store.dispatch(createClaim('Jim', 50));
+//store.dispatch(createClaim('Alex', 10));
+//store.dispatch(createClaim('Jim', 10));
+//store.dispatch(createClaim('Bob', 10));
 
-// store.dispatch(deletePolicy('Bob'));
+//store.dispatch(deletePolicy('Alex'));
+//store.dispatch(deletePolicy('Jim'));
+//store.dispatch(deletePolicy('Bob'));
 
 console.log(store.getState());
