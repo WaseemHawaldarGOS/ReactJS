@@ -9,7 +9,7 @@ import SongDetail from './SongDetail';
     songsReducer is used to store static song list songs property.
     selectedSongReducer is used to catch the action dispatched and accordingly update the selectedSong property.
 
-    Once user click on select button a action will be dispatched bcz we added  the method (selectSong) to connect in SongList.js
+    Once user click on select button, an action will be dispatched bcz we added  the method (selectSong) to connect in SongList.js
     It will be caught by actions/index.js , it returns type as SONG_SELECTED.
     We also have reducer listening to type as SONG_SELECTED, so it updates the redux store accordingly.
 **/
