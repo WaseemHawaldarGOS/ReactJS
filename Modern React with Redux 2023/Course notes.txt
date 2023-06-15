@@ -1,0 +1,30 @@
+Section 19. Dive into Redux Toolkit
+
+Versions being used in this course
+React - 18.2.0
+Reduxtoolkit - 1.8.5
+React-Redux - 8.0.4
+
+
+Launch 69.drawio from resources folder using draw.io web version to see theory about redux, useReducer and reduxtoolkit.
+
+Source code to start practicals:
+codesandbox.io/s/rtk-360ssw
+
+Launch 70.drawio from resources folder using draw.io web version to see theory about redux, useReducer and reduxtoolkit.
+Launch 71.drawio from resources folder using draw.io web version to see theory about redux, useReducer and reduxtoolkit.
+
+Completed project link - https://codesandbox.io/s/completed-media-project-zyz2mx
+
+------ Changes before we exeucte working code using intellij ultimate edition
+
+Make sure nodejs is installed
+
+Install node js from - https://nodejs.org/dist/v20.3.0/
+Node JS version used is v20.3.0
+
+C:\Users\Nafeesa>npm --version
+9.6.7
+
+>cd D:\Waseem\Git-code\ReactJS\Modern React with Redux 2023\workspace
+>npx create-react-app SongsMoviesReduxToolkit
