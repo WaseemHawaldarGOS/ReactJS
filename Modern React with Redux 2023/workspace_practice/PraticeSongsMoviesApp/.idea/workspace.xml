@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5167606c-9035-477b-b3c2-21159225336f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/.idea/workspace.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 10 - Using Ref for DOM access/.idea/Section 10 - Using Ref for DOM access.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 12 Understanding hooks in React/.idea/Section 12 Understanding hooks in React.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 18-19 async action with redux thunk without memoize/.idea/Section 18-19 async action with redux thunk without memoize.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 2 Building content with JSX/.idea/Section 2 Building content with JSX.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 3 - Communicating with Props/.idea/Section 3 - Communicating with Props.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section-7-user-inputs-with-forms-and-events/.idea/Section-7-user-inputs-with-forms-and-events.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section-8 - Making API requests/.idea/Section-8 - Making API requests.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section13 - Navigation from scratch/.idea/Section13 - Navigation from scratch.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section14 - hooks and custom hook youtube app/.idea/Section14 - hooks and custom hook youtube app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section17 Integrating react with redux/.idea/Section17 Integrating react with redux.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace_practice/15-day-marathon-practice/songs-app-redux/songs-app-redux/songs-app-redux.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../workspace/SongsMoviesApp/SongsMoviesApp/SongsMoviesApp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PraticeSongsMoviesApp.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../React testing with jest and enzyme/workspace/.idea/workspace.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Modern React with Redux 2020/Course notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/Course notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 18-19 async action with redux thunk memoized version/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 18-19 async action with redux thunk memoized version/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 2 Building content with JSX/src/components/JSXDifference1.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 2 Building content with JSX/src/components/JSXDifference1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 2 Building content with JSX/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section 2 Building content with JSX/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section-6-lifecycle-methods/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/Section-6-lifecycle-methods/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/section-4-and-5-function-and-class-based-components/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Modern React with Redux 2020/workspace/section-4-and-5-function-and-class-based-components/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Course notes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../Course notes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/69.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/70.drawio" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../resources/71.drawio" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2RGyUqJ2EfDwubFccL93dtPRrps" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Waseem/Git-code/ReactJS/Modern React with Redux 2023/workspace_practice/PraticeSongsMoviesApp&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Waseem\Git-code\ReactJS\Modern React with Redux 2023\workspace_practice\PraticeSongsMoviesApp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Waseem\Git-code\ReactJS\Modern React with Redux 2023\workspace_practice\PraticeSongsMoviesApp\src\store" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5167606c-9035-477b-b3c2-21159225336f" name="Changes" comment="" />
+      <created>1686890733285</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1686890733285</updated>
+      <workItem from="1686890733991" duration="1312000" />
+      <workItem from="1686892090408" duration="819000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
